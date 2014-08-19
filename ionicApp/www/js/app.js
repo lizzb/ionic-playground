@@ -4,9 +4,12 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-//var app = 
-angular.module('ionicApp', ['ionic', 'ionicApp.controllers'])
 
+var app = angular.module('ionicApp', ['ionic', 'ionicApp.controllers'])
+
+//
+// RUN
+//
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -21,7 +24,34 @@ angular.module('ionicApp', ['ionic', 'ionicApp.controllers'])
   });
 })
 
+//
+// CONFIG
+//
 .config(function($stateProvider, $urlRouterProvider) {
+  /*$urlRouterProvider.otherwise('/todos')
+
+  $stateProvider
+  .state('todos', {
+    url: '/todos',
+    controller: 'TodosCtrl',
+    templateUrl: 'todos.html',
+    resolve: {
+      todos: function(TodosService) {
+        return TodosService.getTodos()
+      }
+    }
+  })
+  .state('todo', {
+    url: '/todos/:todoId',
+    controller: 'TodoCtrl',
+    templateUrl: 'todo.html',
+    resolve: {
+      todo: function($stateParams, TodosService) {
+        return TodosService.getTodo($stateParams.todoId)
+      }
+    }
+  })
+})*/
   $stateProvider
 
     .state('app', {

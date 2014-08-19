@@ -45,4 +45,15 @@ angular.module('ionicApp.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+
+//app
+.controller('TodosCtrl', function($scope, todos) {
+  $scope.todos = todos
+})
+
+//app
+.controller('TodoCtrl', function($scope, todo) {
+  $scope.todo = todo
 });
