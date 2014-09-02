@@ -1,6 +1,6 @@
 angular.module('ionicApp.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+app.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -47,13 +47,12 @@ angular.module('ionicApp.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-
 //app
 .controller('TodosCtrl', function($scope, todos) {
-  $scope.todos = todos
+  $scope.todos = todos;
 })
 
 //app
 .controller('TodoCtrl', function($scope, todo) {
-  $scope.todo = todo
+  $scope.todo = todo;
 });
