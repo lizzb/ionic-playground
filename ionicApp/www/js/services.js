@@ -14,16 +14,18 @@ app.service('TodosService', function($q) {
         done: true
       }
     ],
+    
     getTodos: function() {
       return this.todos
     },
+
     getTodo: function(todoId) {
       var dfd = $q.defer()
       this.todos.forEach(function(todo) {
         if (todo.id === todoId) dfd.resolve(todo)
       })
 
-      return dfd.promise
+      return dfd.promise;
     }
 
   }

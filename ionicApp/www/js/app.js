@@ -106,7 +106,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
           controller: 'TodosCtrl',
           resolve: {
             todos: function(TodosService) {
-              return TodosService.getTodos()
+              return TodosService.getTodos();
             }
           }
         }
@@ -121,7 +121,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
           controller: 'TodoCtrl',
           resolve: {
             todo: function($stateParams, TodosService) {
-              return TodosService.getTodo($stateParams.todoId)
+              return TodosService.getTodo($stateParams.todoId);
             }
           }
         }
@@ -129,7 +129,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
   // if none of the above states are matched, use this as the fallback
   // $urlRouterProvider.otherwise('/todos')
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/browse');
 });
 
   /*$urlRouterProvider.otherwise('/todos')
